@@ -16,7 +16,8 @@
         <td>{{ user.username }}</td>
         <td>{{ user.email }}</td>
         <td>
-          <a class="btn btn-primary" routerLink="/users/{{user.id}}">Info</a>
+            <a class="btn btn-primary" routerLink="/users/{{user.id}}">Info</a>
+            <a class="btn btn-warning ml-3" routerLink="/users/edit/{{user.id}}">Edit</a>
         </td>
       </tr>
     </tbody>

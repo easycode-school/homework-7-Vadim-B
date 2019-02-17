@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <button class="btn btn-primary mb-5" (click)="navigateExmpl()">Go back</button>
+        <form name="userEditForm" novalidate *ngIf="user" (ngSubmit)="submitEdit(userEditForm)" #userEditForm="ngForm">
+          <div class="form-group">
+            <label for="name-input">Name</label>
+            <input type="text" class="form-control" id="name-input" name="name-input" placeholder="Name" [(ngModel)]="user.name">
+          </div>
+          <div class="form-group">
+            <label for="username-input">Username</label>
+            <input type="text" class="form-control" id="username-input" name="username-input" placeholder="Username" [(ngModel)]="user.username">
+          </div>
+          <div class="form-group">
+            <label for="email-input">Email</label>
+            <input type="text" class="form-control" id="email-input" name="email-input" placeholder="Email" [(ngModel)]="user.email">
+          </div>
+          <div class="form-group">
+              <label for="phone-input">Phone</label>
+              <input type="text" class="form-control" id="phone-input" name="phone-input" placeholder="Phone" [(ngModel)]="user.phone">
+            </div>
+          <button type="submit" class="btn btn-primary mr-3">Edit</button>
+          <button type="button" class="btn btn-secondary" (click)="navigateExmpl()">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
